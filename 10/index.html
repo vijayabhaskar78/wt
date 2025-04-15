@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><style>li{margin:5px}</style></head>
+<body>
+<h1>Books</h1>
+<ul id="b"></ul>
+<script>
+fetch('/books').then(r=>r.json()).then(d=>{
+  b.innerHTML=d.map(x=>`<li>${x.title}</li>`).join('')
+})
+</script>
+</body>
+</html>

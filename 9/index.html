@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Railway Booking</title>
+  <style>
+    body { font-family:sans-serif; background:#eef; padding:20px; }
+    form, table { background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 8px #aaa; max-width:350px; margin-bottom:20px; }
+    input, select, button { width:100%; margin:6px 0; padding:8px; }
+    button { background:#28a; color:#fff; border:none; }
+    th, td { border:1px solid #ccc; padding:6px; text-align:center; }
+    table { border-collapse:collapse; width:100%; }
+    th { background:#ddd; }
+  </style>
+</head>
+<body>
+  <h2>Book Ticket</h2>
+  <form action="book.php" method="POST">
+    <input name="n" placeholder="Name">
+    <input type="date" name="d">
+    <select name="f"><option>Delhi</option><option>Hyd</option></select>
+    <select name="t"><option>Mumbai</option><option>Chennai</option></select>
+    <select name="c"><option>1-A</option><option>2-A</option></select>
+    <select name="b"><option>LB</option><option>UB</option></select>
+    <input type="number" name="num" placeholder="Tickets">
+    <button>Book</button>
+  </form>
+
+  <h2>Timetable</h2>
+  <table>
+    <tr><th>Route</th><th>Depart</th><th>Arrive</th><th>Fare</th></tr>
+    <tr><td>Delhi–Mumbai</td><td>10:00</td><td>20:00</td><td>1000</td></tr>
+    <tr><td>Hyd–Chennai</td><td>06:00</td><td>12:00</td><td>700</td></tr>
+  </table>
+</body>
+</html>
